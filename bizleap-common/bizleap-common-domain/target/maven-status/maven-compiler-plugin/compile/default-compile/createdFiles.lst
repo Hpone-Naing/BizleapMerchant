@@ -1,0 +1,6 @@
+com\bizleap\common\domain\AbstractEntity.class
+com\bizleap\common\domain\Error.class
+com\bizleap\utils\Parser.class
+com\bizleap\utils\ServiceUnavailableException.class
+com\bizleap\common\domain\SystemConstant.class
+com\bizleap\utils\BizLeapUtils.class

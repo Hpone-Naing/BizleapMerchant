@@ -1,0 +1,59 @@
+<div id="detail-table" class="hide">
+
+	<div th:if="${product!=NULL}" id="product-detail-table" class="hide">
+		<table style="width: 40%;">
+			<tr th:if="${product!='INVALID'}" th:value="${product.id}"
+				id="detail-product-id">
+				<td>Product BoId: </td>
+				<td th:text="${product.boId}"></td>
+				<!-- <td><input type="submit" value="Add New" id="addNewButton" onclick="addNewProduct()"/></td> -->
+			</tr>
+			<tr th:if="${product!='INVALID'}">
+				<td>Product Type: </td>
+				<td th:text="${product.productType}"></td>
+			</tr>
+			
+			<tr th:if="${product!='INVALID'}">
+				<td>Base Price: </td>
+				<td th:text="${product.basePrice}"></td>
+			</tr>
+			
+			<tr th:if="${product!='INVALID'}">
+				<td>Weight: </td>
+				<td th:text="${product.weight}"></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div th:if="${purchaseorder!=NULL}" id="purchaseorder-detail-table" class="hide">
+		<table style="width: 40%;">
+			<tr th:if="${purchaseorder!='INVALID'}" th:value="${purchaseorder.id}"
+				id="detail-purchaseorder-id">
+				<td>PurchaseOrder BoId: </td>
+				<td  th:text="${purchaseorder.boId}" style=""></td>
+				<!-- <td><input type="submit" value="Add New" id="addNewButton" onclick="addNewPurchaseOrder()"/></td> -->
+			</tr>
+			<tr th:if="${purchaseorder!='INVALID'}">
+				<td>Purchase Date: </td>
+				<td th:text="${purchaseorder.purchaseDate}"></td>
+			</tr>	
+			<tr th:if="${purchaseorder!='INVALID'}">
+				<td>Price: </td>
+				<td th:text="${purchaseorder.price}"></td>
+			</tr>
+			
+			<tr th:if="${purchaseorder!='INVALID'}">
+				<td>Quantity: </td>
+				<td th:text="${purchaseorder.quantity}"></td>
+			</tr>
+			<tr th:if="${purchaseorder!='INVALID'}">
+				<td>Amount: </td>
+				<td th:text="${purchaseorder.amount}"></td>
+			</tr>
+			<tr th:if="${purchaseorder!='INVALID'}">
+				<td>Product BoId: </td>
+				<td th:text="${purchaseorder.product.boId}"></td>
+			</tr>
+		</table>
+	</div>
+</div>
